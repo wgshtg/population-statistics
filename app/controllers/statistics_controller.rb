@@ -19,14 +19,8 @@ class StatisticsController < ApplicationController
     @data.each do |obj|
       @result.store(obj[:Age], obj[:Male])
     end
-    # respond_to do |format|
-    #   format.js   {}
-    #   format.json { render json: @result }
-    # end
-    # render json: @result;
-    # render partial: "query", locals: {tutorial: @result}
-    
-# render js: "alert('Hello Rails');"
-
+    if !params[:AreaName].present?
+      @result.store("1歲", "1111")
+    end
   end
 end
