@@ -6,10 +6,11 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">首頁<span class="sr-only">(current)</span></a>
+        <%= link_to '首頁', root_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">各區人口資訊</a>
+        <!--<a class="nav-link" href="#">各區人口資訊</a>-->
+        <%= link_to '各區人口資訊', statistics_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">各區人口比較</a>

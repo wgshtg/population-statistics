@@ -1,0 +1,56 @@
+<div class="row m-3">
+<div class="input-group mb-3 col-md-6">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">地區</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected value="">選擇地區...</option>
+    <%= options_for_select(@AreaNames) %>
+  </select>
+</div>
+<div class="input-group mb-3 col-md-6">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect02">年份</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect02">
+    <option selected value="">選擇年份...</option>
+    <%= options_for_select(@Years) %>
+  </select>
+</div>
+<div class="input-group mb-3 col-md-6">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect03">月份</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect03">
+    <option selected value="">選擇月份...</option>
+    <%= options_for_select(@Months) %>
+  </select>
+</div>
+<div class="input-group mb-3 col-md-6">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect04">性別</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect04">
+    <option selected value="">選擇性別...</option>
+    <%= options_for_select(@Sexs) %>
+  </select>
+</div>
+<div class="input-group mb-3 col-md-6">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect05">年齡區間</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect05">
+    <option selected value="">選擇年齡區間...</option>
+    <%= options_for_select(@Ages) %>
+  </select>
+</div>
+<div class="col-md-6 mb-3">
+  <button type="button" class="btn btn-primary" id="query">查詢</button>
+  <%= link_to "查詢", statistics_query_path, remote: true, class: "btn btn-primary" %>
+</div>
+</div>
+<div id="chart"></div>
+<% pie_chart(@result) %>
+<% pie_chart({"Football" => 10, "Basketball" => 5}) %>
+<% pie_chart [["Football", 10], ["Basketball", 5]] %>
+<!--1070323 Ruby 進階 上課錄影-->

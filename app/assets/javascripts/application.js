@@ -16,3 +16,14 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require Chart.bundle
+//= require chartkick
+
+$(document).ready(function() {
+//   $('.btn').on("ajax:success", function(event, data, status, xhr){
+//       console.log(status);
+//     //   console.log(xhr);
+//     $('#chart').append(xhr.responseText);
+//   });
+    
+});
