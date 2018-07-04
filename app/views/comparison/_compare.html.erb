@@ -1,0 +1,18 @@
+<% if @chart == "Line" %>
+    <%= line_chart(@summary, colors: @colors, xtitle: "歲", ytitle: "人數(位)", thousands: ",") %>
+<% end %>
+<% if @chart == "Column" || @chart == "" %>
+    <%= column_chart(@summary, colors: @colors, xtitle: "歲", ytitle: "人數(位)", thousands: ",") %>
+<% end %>
+<% if @chart == "Column(stacked)" %>
+    <%= column_chart(@summary, colors: @colors, stacked: true, xtitle: "歲", ytitle: "人數(位)", thousands: ",") %>
+<% end %>
+<% if @chart == "Bar" %>
+    <%= bar_chart(@summary, colors: @colors, xtitle: "人數(位)", ytitle: "歲", thousands: ",") %>
+<% end %>
+<% if @chart == "Area" %>
+    <%= area_chart(@summary, colors: @colors, xtitle: "歲", ytitle: "人數(位)", thousands: ",") %>
+<% end %>
+<% if @chart == "Scatter" %>
+    <%= scatter_chart(@summary, colors: @colors, xtitle: "歲", ytitle: "人數(位)", thousands: ",") %>
+<% end %>

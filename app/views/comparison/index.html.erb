@@ -1,6 +1,7 @@
 <%= form_tag(comparison_compare_path, method: "get", remote: true) do %>
   <div class="row m-3">
-    <div class="input-group mb-3 col-md-6">
+    <div class="col-md-6 p-0">
+    <div class="input-group mb-3 col">
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect01-1">A地區</label>
       </div>
@@ -9,7 +10,7 @@
         <%= options_for_select(@AreaNames) %>
       </select>
     </div>
-    <div class="input-group mb-3 col-md-6">
+    <div class="input-group mb-3 col">
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect02-1">年份</label>
       </div>
@@ -18,7 +19,7 @@
         <%= options_for_select(@Years) %>
       </select>
     </div>
-    <div class="input-group mb-3 col-md-6">
+    <div class="input-group mb-3 col">
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect03-1">月份</label>
       </div>
@@ -27,7 +28,9 @@
         <%= options_for_select(@Months) %>
       </select>
     </div>
-    <div class="input-group mb-3 col-md-6">
+    </div>
+    <div class="col-md-6 p-0">
+    <div class="input-group mb-3 col">
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect01-2">B地區</label>
       </div>
@@ -36,23 +39,24 @@
         <%= options_for_select(@AreaNames) %>
       </select>
     </div>
-    <div class="input-group mb-3 col-md-6">
+    <div class="input-group mb-3 col">
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect02-2">年份</label>
       </div>
-      <select class="custom-select" id="inputGroupSelect02-2" name="Year">
+      <select class="custom-select" id="inputGroupSelect02-2" name="Year2">
         <option selected value="">選擇年份...</option>
         <%= options_for_select(@Years) %>
       </select>
     </div>
-    <div class="input-group mb-3 col-md-6">
+    <div class="input-group mb-3 col">
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect03-2">月份</label>
       </div>
-      <select class="custom-select" id="inputGroupSelect03-2" name="Month">
+      <select class="custom-select" id="inputGroupSelect03-2" name="Month2">
         <option selected value="">選擇月份...</option>
         <%= options_for_select(@Months) %>
       </select>
+    </div>
     </div>
     <%= render "shared/formfield" %>
     <div class="col-md-12 mb-3 text-right">
