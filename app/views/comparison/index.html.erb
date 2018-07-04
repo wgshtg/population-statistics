@@ -1,0 +1,63 @@
+<%= form_tag(comparison_compare_path, method: "get", remote: true) do %>
+  <div class="row m-3">
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01-1">A地區</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01-1" name="AreaName1">
+        <option selected value="">選擇地區...</option>
+        <%= options_for_select(@AreaNames) %>
+      </select>
+    </div>
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect02-1">年份</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect02-1" name="Year1">
+        <option selected value="">選擇年份...</option>
+        <%= options_for_select(@Years) %>
+      </select>
+    </div>
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect03-1">月份</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect03-1" name="Month1">
+        <option selected value="">選擇月份...</option>
+        <%= options_for_select(@Months) %>
+      </select>
+    </div>
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01-2">B地區</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01-2" name="AreaName2">
+        <option selected value="">選擇地區...</option>
+        <%= options_for_select(@AreaNames) %>
+      </select>
+    </div>
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect02-2">年份</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect02-2" name="Year">
+        <option selected value="">選擇年份...</option>
+        <%= options_for_select(@Years) %>
+      </select>
+    </div>
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect03-2">月份</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect03-2" name="Month">
+        <option selected value="">選擇月份...</option>
+        <%= options_for_select(@Months) %>
+      </select>
+    </div>
+    <%= render "shared/formfield" %>
+    <div class="col-md-12 mb-3 text-right">
+      <%= submit_tag("查詢", class: "btn btn-primary") %>
+    </div>
+  </div>
+<% end %>
+<div id="chart" class="m-4"></div>
