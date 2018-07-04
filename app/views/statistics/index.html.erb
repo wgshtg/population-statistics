@@ -38,17 +38,26 @@
     </div>
     <div class="input-group mb-3 col-md-6">
       <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect05">年齡區間</label>
+        <label class="input-group-text" for="inputGroupSelect05">年齡區間(下限)</label>
       </div>
-      <select class="custom-select" id="inputGroupSelect05" name="Age">
-        <option selected value="">選擇年齡區間...</option>
+      <select class="custom-select" id="inputGroupSelect05" name="AgeMin">
+        <option selected value="">選擇年齡區間(下限)...</option>
         <%= options_for_select(@Ages) %>
       </select>
     </div>
-    <div class="col-md-6 mb-3">
+    <div class="input-group mb-3 col-md-6">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect05">年齡區間(上限)</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect05" name="AgeMax">
+        <option selected value="">選擇年齡區間(上限)...</option>
+        <%= options_for_select(@Ages) %>
+      </select>
+    </div>
+    <div class="col-md-12 mb-3 text-right">
       <%= submit_tag("查詢", class: "btn btn-primary") %>
     </div>
   </div>
 <% end %>
-<div id="chart"></div>
+<div id="chart" class="m-4"></div>
   
